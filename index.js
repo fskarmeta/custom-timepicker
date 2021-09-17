@@ -6,7 +6,7 @@ let selectedColor = 'Tomato';
 let editable = true;
 let timesArray = [];
 
-// Scope of TimePicker
+// Scope of TimePicker dates
 timePickerStartTimeSelect.addEventListener('change', (e) => {
     startTime = +e.target.value
     createEndTimeOptions(startTime, endTime, timePickerEndTimeSelect)
@@ -14,7 +14,7 @@ timePickerStartTimeSelect.addEventListener('change', (e) => {
 })
 timePickerEndTimeSelect.addEventListener('change', (e) => endTime = +e.target.value)
 
-// Time range for creating a range of time Array
+// Time range restrictions for the array of ranges
 rangeStartTimeSelect.addEventListener('change', (e) => {
     rangeStartTime = +e.target.value
     createEndTimeOptions(rangeStartTime, rangeEndTime, rangeEndTimeSelect)
@@ -27,7 +27,7 @@ selectIfEditable.addEventListener('change', (e) => {
     editable = e.target.value === '1' ? true : false
 })
 
-// Render Array of range
+// Render Array of ranges
 renderArrayButton.addEventListener('click', () => {
     if (rangeStartTime && rangeEndTime) {
         timesArray = createTimesArray(rangeStartTime, rangeEndTime)
@@ -55,10 +55,10 @@ colorSelect.addEventListener('change', (e) => selectedColor = e.target.value)
 addColorsToSelect(colorSelect)
 
 
-// add event listener tu output
+// add event listener to output
 output.addEventListener('click', () => getArrayOfSelectedDates())
 
-// Create range of time for first rendering the datepicker
+// Create range of times for first rendering the datepicker
 createStartTimeOptions(startTime, endTime, timePickerStartTimeSelect)
 
 
