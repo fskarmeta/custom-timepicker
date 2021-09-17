@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="inputs.js" defer></script>
+    <script type="text/javascript" src="colors.js" defer></script>
+    <script type="text/javascript" src="utils.js" defer></script>
+    <script type="text/javascript" src="renderTimePicker.js" defer></script>
+    <script type="text/javascript" src="index.js" defer></script>
+    <title>Custom TimePicker Bafian</title>
+</head>
+
+<body>
+    <div>
+        <p>1. Render TimePicker between this hours</p>
+    </div>
+    <div><select name="timePickerStartTimeSelect" id="timePickerStartTimeSelect">
+            <option value="" disabled selected>Start Hour</option>
+        </select>
+        <select name="timePickerEndTimeSelect" id="timePickerEndTimeSelect">
+            <option value="" disabled selected>End Hour</option>
+        </select>
+        <span>Color</span>
+        <select name="colors" id="selectColor">
+            <option value="" disabled selected>Color</option>
+        </select>
+        <button id="reRenderTimePicker">Render or Reset</button>
+    </div>
+    <div>
+        <p>2.(Optional) Create Array of Ranges to Load into TimePicker</p>
+    </div>
+    <div><select name="startTime" id="rangeStartTimeSelect">
+            <option value="" disabled selected>Start Time</option>
+        </select>
+        <select name="endTime" id="rangeEndTimeSelect">
+            <option value="" disabled selected>End Time</option>
+        </select>
+        <span>Editable</span>
+        <select name="Editable" id="selectEditable">
+            <option value="1">True</option>
+            <option value="2">False</option>
+        </select>
+        <button id="renderArray">Render</button>
+    </div>
+<div>
+    <p>3. Outpu array of selected ranges</p>
+    <button id="output">Console.log</button>
+</div>
+    <div id="component"></div>
+</body>
+
+</html>
